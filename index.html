@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequential Invoice Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Button to open the modal -->
+    <div class="container">
+        <h1>Sequential Invoice Generation Assessment</h1>
+        <button class="invoice-button" id="openModal">Create an Invoice</button>
+    </div>
+
+    <!-- The Modal -->
+    <div class="container">
+    <div id="invoiceModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+        <h2>Create New Invoice</h2>
+    <hr>
+    <div class="invoice-form">
+        <p class="inline-info">
+            <span><strong>Invoice </strong><strong style="color: gray;">#</strong><span id="invoiceNumber" ></span></span>
+            <span>Date: <span id="invoiceDate"></span></span>
+        </p>
+       <div class="input-box">
+        <label for="businessName" style="color: black;">Business Name</label>
+        <input type="text" id="businessName" name="businessName" >
+       </div>
+
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address">
+
+        <div class="form-group">
+            <div class="input-container">
+                <label for="phone">Phone No</label>
+                <input type="text" id="phone" name="phone">
+            </div>
+        
+            <div class="input-container">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="input-box">
+        <label for="clientName"style="color: black;">Client Name</label>
+        <input type="text" id="clientName" name="clientName">
+        </div>
+        <label for="clientAddress" >Client Address</label>
+        <input type="text" id="clientAddress" name="clientAddress">
+        <div class="form-group">
+        <div class="input-container">
+        <label for="phone">Phone No</label>
+        <input type="text" id="clientphone" name="phone">
+        </div>
+        <div class="input-container">
+        <label for="email">Email</label>
+        <input type="email" id="clientemail" name="email">
+        </div>
+        </div>
+        <div class="form-group">
+        <div class="input-container">
+        <label for="paymentDate">Payment Date</label>
+        <input type="date" id="paymentDate" name="paymentDate">
+        </div>
+        <div class="input-container">
+        <label for="invoiceDate">Invoice Date</label>
+        <input type="date" id="invoiceDate" name="invoiceDate">
+        </div>
+        </div>
+        
+
+        <label for="invoiceItems" style="color: black;">Invoice Items:</label>
+        <table id="invoiceItemsTable">
+            <thead>
+                <tr style="color: grey;">
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Unit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" placeholder="Title"></td>
+                    <td><input type="text" placeholder="Description"></td>
+                    <td><input type="number" placeholder="Price"></td>
+                    <td><input type="number" placeholder="Quantity"></td>
+                    <td><input type="text" placeholder="Unit"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="Title"></td>
+                    <td><input type="text" placeholder="Description"></td>
+                    <td><input type="number" placeholder="Price"></td>
+                    <td><input type="number" placeholder="Quantity"></td>
+                    <td><input type="text" placeholder="Unit"></td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" id="addItem">+ Add Item</button><br>
+        <label for="invoiceNote">Invoice Note</label>
+        <textarea id="invoiceNote" name="invoiceNote"></textarea>
+        <button type="button" onclick="generateInvoicePDF()">Submit</button>
+        <div id="qrcode" style="display:none;"></div>
+    </div>
+</div>
+</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

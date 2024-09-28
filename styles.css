@@ -1,0 +1,178 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+.container {
+    text-align: center;
+}
+.container h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.inline-info {
+    display: flex;
+    justify-content: space-between;
+}
+#invoiceNumber{
+    color: rgb(49, 152, 221);
+}
+.input-box {
+     display: inline-block; 
+     width: 95%; 
+    border: 2px solid #ccc; /* Creates the box around the input */
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+
+}
+
+.input-box h3 {
+    margin-top: 0;          /* Aligns the heading properly */
+    font-size: 1.2em;       /* Slightly enlarges the heading text */
+    font-weight: bold;      /* Boldens the heading */
+}
+
+.input-box label {
+ 
+    margin-bottom: 10px;    /* Adds space between the label and the input */
+    font-weight: bold; 
+   
+         
+}
+
+.input-box input {
+      
+    padding: 20px;          /* Adds padding inside the text input */
+    font-size: 1em;         /* Increases the font size slightly */
+    border: 1px solid #aaa; /* Adds a border around the input */
+    border-radius: 4px;     /* Rounds the corners of the input field */
+}
+
+.form-group {
+    display: flex; /* Makes the inputs appear side by side */
+    gap: 20px;     /* Adds space between the input fields */
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column; /* Ensures the label is on top of the input */
+    width: 100%;            /* Adjusts the width of each input box */
+    margin-right: 10px;  /* Adds space between each input container */
+}
+
+.input-container label {
+    margin-bottom: 5px;      /* Adds space between label and input */
+    font-weight: bold;       /* Makes the label text bold */
+}
+
+.input-container input {
+    padding: 10px;           /* Adds padding inside the text input */
+    font-size: 1em;          /* Sets the font size inside the input */
+    border: 1px solid #aaa;  /* Adds a border to the input */
+    border-radius: 4px;      /* Rounds the corners of the input field */
+}
+
+
+.invoice-button {
+    padding: 15px 30px;
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.invoice-button:hover {
+    background-color: #4c0e70;
+}
+/* Modal Styles */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+    background-color: white;
+    margin: 4% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+    text-align: left;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+label{
+    color: gray;
+}
+.invoice-form {
+    background-color: white;
+   
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+}
+.invoice-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.invoice-form label {
+    font-weight: bold;
+}
+.invoice-form input, .invoice-form textarea {
+    width: 95%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.invoice-form table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.invoice-form th, .invoice-form td {
+    padding: 10px;
+    text-align: left;
+}
+.invoice-form button {
+    padding: 10px 20px;
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.invoice-form button:hover {
+    background-color: #4c0e70;
+}
+
